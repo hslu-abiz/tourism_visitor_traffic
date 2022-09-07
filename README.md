@@ -1,5 +1,9 @@
 # Tourism Project
 
+[Paper - Tourism Forecast with Weather, Event, and Cross-industry Data](https://www.scitepress.org/Papers/2021/103230/103230.pdf)
+
+
+
 Workflow to train models
 
 ## Build system
