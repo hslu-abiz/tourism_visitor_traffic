@@ -1,0 +1,20 @@
+# Dataset
+dataset dataset
+
+# Fold
+num_train_years 4
+
+# Optimizer
+optimizer SGD
+learning_rate 0.01
+momentum 0.9
+
+# Model
+model linear
+
+# Pipeline
+time_steps 1
+batch_size 4096
+
+# Training
+epochs 100

@@ -1,0 +1,19 @@
+# Optimizer
+optimizer Adam
+learning_rate 1e-3
+beta_1 0.9
+beta_2 0.99
+
+# Model
+model embeddedrnn
+hidden_size 128
+l1_regularization 0
+l2_regularization 10e2
+dropout 0.1
+
+# Pipeline
+time_steps None
+batch_size 1
+
+# Training
+epochs 150000

@@ -1,0 +1,5 @@
+FROM tensorflow/tensorflow:2.1.0-py3
+MAINTAINER Daniel Pfaeffli <daniel.pfaeffli@hslu.ch>
+
+COPY ./requirements_dev.txt /tmp/
+RUN pip3 install --no-cache-dir -r /tmp/requirements_dev.txt

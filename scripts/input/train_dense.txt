@@ -1,0 +1,22 @@
+# Dataset
+dataset dataset
+
+# Fold
+num_train_years 4
+
+# Optimizer
+optimizer Adam
+learning_rate 0.1
+
+# Model
+model dense
+activation relu
+architecture 8 4 4
+l2_regularization 1.
+
+# Pipeline
+time_steps 1
+batch_size 4096
+
+# Training
+epochs 100

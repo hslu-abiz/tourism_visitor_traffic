@@ -1,0 +1,22 @@
+# Dataset
+dataset dataset
+
+# Fold
+num_train_years 4
+
+# Optimizer
+optimizer Adam
+learning_rate 1.
+
+# Model
+model rnn
+unit_type SimpleRNN
+architecture 32
+kernel_regularization 1.
+
+# Pipeline
+time_steps None
+batch_size 1
+
+# Training
+epochs 100

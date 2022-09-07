@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+
+  dev-stack:
+    build:
+     context: ./
+     dockerfile: ./docker/Dockerfile-dev
+    volumes:
+      - ../data:/app/data
+      - ../results:/app/results
+      - ../tourism_workflow:/app/main
+    environment:
+      - RESULTS_PATH=/app/results
+      - DATA_PATH=/app/data
+      - SOURCE_PATH=/app/main
+    entrypoint: tail -f /dev/null
+
+  gpu-stack:
+    build:
+     context: ./
+     dockerfile: ./docker/Dockerfile-gpu
+    volumes:
+      - ../data:/app/data
+      - ../results:/app/results
+      - ../tourism_workflow:/app/main
+    environment:
+      - RESULTS_PATH=/app/results
+      - DATA_PATH=/app/data
+      - SOURCE_PATH=/app/main
+      - NV_GPU=0
+    entrypoint: tail -f /dev/null
+
+  tensorboard:
+    image: tensorflow/tensorflow
+    network_mode: host
+    ports:
+      - "6007:6007"
+    volumes:
+      - ../results:/app/results
+    entrypoint: tensorboard --logdir /app/results --port 6007
+    #entrypoint: tail -f /dev/null

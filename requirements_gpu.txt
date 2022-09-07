@@ -1,0 +1,6 @@
+tensorflow-gpu>=2.0
+pandas>=0.24.1
+numpy>=1.16.2
+pytest
+scikit-learn>=0.20.2
+sklearn
